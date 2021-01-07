@@ -18,7 +18,7 @@ class AsyncEventDispatchJobService
 
     public function __construct(DriverFactory $driverFactory)
     {
-        $this->driver = $driverFactory->get('async_event');
+        $this->driver = $driverFactory->get('async_event_queue');
     }
 
     /**
@@ -26,7 +26,7 @@ class AsyncEventDispatchJobService
      */
     public function push(object $object, int $delay = 0): bool
     {
-        $this->driver->push(new AsyncEventDispatchJobService($object), $delay);
+        $this->driver->push(new AsyncEventDispatchJob($object), $delay);
         return true;
     }
 }

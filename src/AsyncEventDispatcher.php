@@ -9,6 +9,7 @@ namespace Hyperf\AsyncEvent;
 use Hyperf\AsyncQueue\Driver\DriverFactory;
 use Hyperf\Contract\StdoutLoggerInterface;
 use Hyperf\Utils\ApplicationContext;
+use Mangatoon\Hyperf\Extend\Utils\LogUtil;
 use Psr\EventDispatcher\EventDispatcherInterface;
 use Psr\EventDispatcher\ListenerProviderInterface;
 use Psr\EventDispatcher\StoppableEventInterface;
