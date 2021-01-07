@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 return [
-    'async_event' => [
+    'async_event_queue' => [
         'driver' => Hyperf\AsyncQueue\Driver\RedisDriver::class,
         'redis' => [
             'pool' => 'default',

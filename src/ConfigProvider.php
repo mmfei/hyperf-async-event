@@ -51,10 +51,10 @@ class ConfigProvider
                     'destination' => BASE_PATH . '/config/autoload/redis.php',
                 ],
                 [
-                    'id' => 'processer',
-                    'description' => 'The config for processer.',
-                    'source' => __DIR__ . '/../publish/processer.php',
-                    'destination' => BASE_PATH . '/config/autoload/processer.php',
+                    'id' => 'processes',
+                    'description' => 'The config for processes.',
+                    'source' => __DIR__ . '/../publish/processes.php',
+                    'destination' => BASE_PATH . '/config/autoload/processes.php',
                 ],
             ],
         ];
