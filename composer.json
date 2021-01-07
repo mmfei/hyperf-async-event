@@ -17,5 +17,10 @@
         "hyperf/async-queue": "^2.1",
         "hyperf/event": "^2.1",
         "hyperf/command": "~2.0.0"
+    },
+    "extra": {
+        "hyperf": {
+            "config": "Hyperf\\AsyncEvent\\ConfigProvider"
+        }
     }
 }
