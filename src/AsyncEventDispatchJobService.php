@@ -26,7 +26,7 @@ class AsyncEventDispatchJobService
      */
     public function push(object $object, int $delay = 0): bool
     {
-        $this->driver->push($object, $delay);
+        $this->driver->push(new AsyncEventDispatchJobService($object), $delay);
         return true;
     }
 }
