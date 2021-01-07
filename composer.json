@@ -1,0 +1,20 @@
+{
+    "name": "mmfei/hyperf-async-event",
+    "type": "library",
+    "description": "An async event for hyperf.",
+    "license": "MIT",
+    "keywords": [
+        "async",
+        "envent",
+        "hyperf"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Hyperf\\AsyncEvent\\": "src/"
+        }
+    },
+    "require": {
+        "hyperf/async-queue": "^2.1",
+        "hyperf/event": "^2.1"
+    }
+}
