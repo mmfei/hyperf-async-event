@@ -7,6 +7,7 @@ declare(strict_types=1);
 namespace Hyperf\AsyncEvent;
 
 use Hyperf\AsyncQueue\Job;
+use Hyperf\Contract\StdoutLoggerInterface;
 use Hyperf\Utils\ApplicationContext;
 
 class AsyncEventDispatchJob extends Job
@@ -22,6 +23,7 @@ class AsyncEventDispatchJob extends Job
 
     public function handle()
     {
+        ApplicationContext::getContainer()->get(StdoutLoggerInterface::class)->debug('Async Event: dispatch --> '.get_class($this->event));
         ApplicationContext::getContainer()->get(AsyncEventDispatcher::class)->dispatchNow($this->event);
     }
 }
