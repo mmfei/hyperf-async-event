@@ -8,7 +8,7 @@
 ```
 composer require mmfei/event
 composer require mmfei/async-queue
-composer require mmfei/async-event
+composer require mmfei/hyperf-async-event
 ```
 ## Configuration
 ### Publish config
