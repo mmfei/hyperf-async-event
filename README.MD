@@ -25,6 +25,13 @@ $event->data = 'test';
 ```
 
 ## Custom Configuration manual
+```php
+//custom configuration
+//you need edit below files
+$eventForAsync = new \StdClass();
+$eventForAsync->is_support_async = false; 
+\Hyperf\Utils\ApplicationContext::getContainer()->get(EventDispatcherInterface::class)->dispatch($eventForAsync);
+```
 ### file \App\Dependencies\MyEventDispatcherFactory.php;
 ```php
 declare(strict_types=1);
@@ -88,7 +95,7 @@ class MyEventDispatcher implements EventDispatcherInterface
     {
         $is_support_async = $event->is_support_async ?? false;
         $delay = $event->async_delay ?? 0;
-        if ($is_support_async) {
+        if ($is_support_async) { // only $event->is_support_async == true
             $this->logger->debug(__METHOD__.":async:".get_class($event));
             $driver_factory = ApplicationContext::getContainer()->get(DriverFactory::class);
             (new \App\AsyncQueue\JobService\AsyncEventDispatchJobService($driver_factory))->push($event, $delay); //推到异步队列中
