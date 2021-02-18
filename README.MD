@@ -25,7 +25,8 @@ php bin/hyperf.php vendor:publish mmfei/hyperf-async-event
 ## Usage
 ```php
 $event = new \StdClass();
-$event->async_delay = 0;
+//$event->async_delay = 0;
+$event->is_support_async = true;
 $event->data = 'test';
 \Hyperf\Utils\ApplicationContext::getContainer()->get(EventDispatcherInterface::class)->dispatch($event);
 ```
