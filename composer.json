@@ -15,7 +15,7 @@
     },
     "require": {
         "hyperf/async-queue": "^2.0",
-        "hyperf/event": "~2.0.0"
+        "hyperf/event": "^2.0.0"
     },
     "extra": {
         "hyperf": {
