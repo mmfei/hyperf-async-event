@@ -7,5 +7,5 @@ use Hyperf\AsyncQueue\Process\ConsumerProcess;
 
 class AsyncEventDispatchProcess extends ConsumerProcess
 {
-    public $queue = 'async_event_queue'; //key
+    public string $queue = 'async_event_queue'; //key
 }

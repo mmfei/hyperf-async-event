@@ -14,7 +14,7 @@ class AsyncEventDispatchJob extends Job
 {
     public $event;
 
-    protected $maxAttempts = 0;
+    protected int $maxAttempts = 0;
 
     public function __construct($event)
     {
